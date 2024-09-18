@@ -1,0 +1,270 @@
+{
+    "sourceFile": "7697016-Front-End.1/avis.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 63,
+            "patches": [
+                {
+                    "date": 1726659849112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726660216321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n \n     for (let i = 0; i < piecesElements.length; i++) {\n       piecesElements[i].addEventListener(\"click\", async function (event) {\n-           /* ... */\n+        const id = event.target.dataset.id;\n+        fetch(`http://localhost:8081/pieces/${id}/avis`);\n       });\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726660239332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n \n     for (let i = 0; i < piecesElements.length; i++) {\n       piecesElements[i].addEventListener(\"click\", async function (event) {\n+        \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       });\n     }\n"
+                },
+                {
+                    "date": 1726660246904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n \n     for (let i = 0; i < piecesElements.length; i++) {\n       piecesElements[i].addEventListener(\"click\", async function (event) {\n-        \n+        // nous récupérons l’identifiant de la pièce automobile\n+         pour laquelle l’utilisateur a cliqué sur le bouton\n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       });\n     }\n"
+                },
+                {
+                    "date": 1726660409537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,17 @@\n export function ajoutListenersAvis() {\n+\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n-\n+ \n     for (let i = 0; i < piecesElements.length; i++) {\n-      piecesElements[i].addEventListener(\"click\", async function (event) {\n-        // nous récupérons l’identifiant de la pièce automobile\n-         pour laquelle l’utilisateur a cliqué sur le bouton\n+ \n+     piecesElements[i].addEventListener(\"click\", function (event) {\n+ \n\\ No newline at end of file\n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-      });\n+ \n+     });\n+ \n     }\n-}\n+ \n+ }\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726661334573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n+        const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661367810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-        fetch(`http://localhost:8081/pieces/${id}/avis`);\n-        const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+         const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661373715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-         const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+         const reponse = as await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661379807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-         const reponse = as await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+         const reponse =  await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661395840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-         const reponse =  await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+        fetch(`http://localhost:8081/pieces/${id}/avis`);\n+        \n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661404657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n+        fetch(`http://localhost:8081/pieces/${id}/avis`);\n         \n  \n      });\n  \n"
+                },
+                {
+                    "date": 1726661420229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-        fetch(`http://localhost:8081/pieces/${id}/avis`);\n-        \n+        const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661426554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-        const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+       as const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661434000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-       as const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+      const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661443029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-      const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+      const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661501452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-        fetch(`http://localhost:8081/pieces/${id}/avis`);\n-      const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+const avis = await reponse.json();\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661573105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-const reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-const avis = await reponse.json();\n+        fetch(`http://localhost:8081/pieces/${id}/avis`);\n+    //   const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661601137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,10 @@\n  \n     }\n  \n  }\n- \n\\ No newline at end of file\n+ const pieceElement = event.target.parentElement;\n+\n+const avisElement = document.createElement(\"p\");\n+for (let i = 0; i < avis.length; i++) {\n+   avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726661678371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n  \n      piecesElements[i].addEventListener(\"click\", function (event) {\n  \n         const id = event.target.dataset.id;\n-        fetch(`http://localhost:8081/pieces/${id}/avis`);\n+      av  fetch(`http://localhost:8081/pieces/${id}/avis`);\n     //   const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n"
+                },
+                {
+                    "date": 1726661696109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n  \n     for (let i = 0; i < piecesElements.length; i++) {\n  \n-     piecesElements[i].addEventListener(\"click\", function (event) {\n+     piecesElements[i].addEventListener(\"click\", as function (event) {\n  \n         const id = event.target.dataset.id;\n-      av  fetch(`http://localhost:8081/pieces/${id}/avis`);\n+      await  fetch(`http://localhost:8081/pieces/${id}/avis`);\n     //   const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n"
+                },
+                {
+                    "date": 1726661723756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     const piecesElements = document.querySelectorAll(\".fiches article button\");\n  \n     for (let i = 0; i < piecesElements.length; i++) {\n  \n-     piecesElements[i].addEventListener(\"click\", as function (event) {\n+     piecesElements[i].addEventListener(\"click\", async function (event) {\n  \n         const id = event.target.dataset.id;\n-      await  fetch(`http://localhost:8081/pieces/${id}/avis`);\n+        fetch(`http://localhost:8081/pieces/${id}/avis`);\n     //   const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n"
+                },
+                {
+                    "date": 1726661730701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", async function (event) {\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n-    //   const   async reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+      const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661747311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+      const\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661754969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-      const\n+      const avis = await re\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661761179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-      const avis = await re\n+      const avis = await reponse.json\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661782024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,16 @@\n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-      const avis = await reponse.json\n+      const avis = await reponse.json();\n+      const pieceElement = event.target.parentElement;\n  \n      });\n  \n     }\n  \n  }\n- const pieceElement = event.target.parentElement;\n \n const avisElement = document.createElement(\"p\");\n for (let i = 0; i < avis.length; i++) {\n    avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n"
+                },
+                {
+                    "date": 1726661788532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,15 +10,15 @@\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n+      const avisElement = document.createElement(\"p\");\n  \n      });\n  \n     }\n  \n  }\n \n-const avisElement = document.createElement(\"p\");\n for (let i = 0; i < avis.length; i++) {\n    avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726661795621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,13 @@\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n+      for (let i = 0; i < avis.length; i++) {\n+         avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n+      }\n  \n      });\n  \n     }\n  \n  }\n-\n\\ No newline at end of file\n-for (let i = 0; i < avis.length; i++) {\n-   avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n-}\n"
+                },
+                {
+                    "date": 1726661823861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n+      \n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661834666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      \n+      pieceElement.ap\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661841566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.ap\n+      pieceElement.append\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661846681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.append\n+      pieceElement.appendChli\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661855676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.appendChli\n+      pieceElement.\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661862325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.\n+      pieceElement.app\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661870569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.app\n+      pieceElement.appendChild\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661877976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.appendChild\n+      pieceElement.appendChild(avi)\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661883411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      pieceElement.appendChild(avi)\n+      pieceElement.appendChild(avisElement);\n  \n      });\n  \n     }\n"
+                },
+                {
+                    "date": 1726661951468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n  \n     for (let i = 0; i < piecesElements.length; i++) {\n  \n      piecesElements[i].addEventListener(\"click\", async function (event) {\n+        \n  \n         const id = event.target.dataset.id;\n         fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n"
+                },
+                {
+                    "date": 1726661958699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,11 @@\n  \n     for (let i = 0; i < piecesElements.length; i++) {\n  \n      piecesElements[i].addEventListener(\"click\", async function (event) {\n-        \n+\n  \n         const id = event.target.dataset.id;\n-        fetch(`http://localhost:8081/pieces/${id}/avis`);\n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n"
+                },
+                {
+                    "date": 1726661980353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n  \n      piecesElements[i].addEventListener(\"click\", async function (event) {\n \n  \n-        const id = event.target.dataset.id;\n+      const id = event.target.dataset.id;\n+      \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n"
+                },
+                {
+                    "date": 1726661996762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n      piecesElements[i].addEventListener(\"click\", async function (event) {\n \n  \n       const id = event.target.dataset.id;\n-      \n+    //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n"
+                },
+                {
+                    "date": 1726662010953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n+      \n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662017336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-      \n+    //   nous reconstruison\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662023755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-    //   nous reconstruison\n+    //   nous reconstruison les donner json \n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662032385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-    //   nous reconstruison les donner json \n+    //   nous reconstruison les donner json grace a la methode json\n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662050263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-    //   nous reconstruison les donner json grace a la methode json\n+    //   nous recons les donner json grace a la methode json \n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662060298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-    //   nous recons les donner json grace a la methode json \n+    //   nous reconstituons  les donner en memoir json grace a la methode json \n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662067599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  \n       const id = event.target.dataset.id;\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n-    //   nous reconstituons  les donner en memoir json grace a la methode json \n+    //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n"
+                },
+                {
+                    "date": 1726662078722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n+    //   on les ajout\n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n"
+                },
+                {
+                    "date": 1726662090032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n-    //   on les ajout\n+    //   on les ajout au dom en \n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n"
+                },
+                {
+                    "date": 1726662101925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     //   on stok la reponse dans une constante \n       const  reponse = await fetch(\"http://localhost:8081/pieces/\" + id + \"/avis\");\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n-    //   on les ajout au dom en \n+    //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n"
+                },
+                {
+                    "date": 1726662107395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n+      \n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n"
+                },
+                {
+                    "date": 1726662114775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n-      \n+    //   nous ajoutons \n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n"
+                },
+                {
+                    "date": 1726662127166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     //   nous reconstituons  les donner en memoir   grace a la methode json \n       const avis = await reponse.json();\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n-    //   nous ajoutons \n+    //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n"
+                },
+                {
+                    "date": 1726662132575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n+    //   \n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662154572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   \n+    //   nous remplissons \n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662172416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons \n+    //   nous remplissons l\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662187187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons l\n+    //   nous remplissons la balise html p en parcournt \n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662193592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons la balise html p en parcournt \n+    //   nous remplissons la balise html p en parcourant les \n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662220136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons la balise html p en parcourant les \n+    //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et les avis\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662230191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et les avis\n+    //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et le\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662240133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     //   on les ajout au dom en recupérent l'element parent \n       const pieceElement = event.target.parentElement;\n     //   nous créeons l'element p \n       const avisElement = document.createElement(\"p\");\n-    //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et le\n+    //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et son commentaire\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n       pieceElement.appendChild(avisElement);\n"
+                },
+                {
+                    "date": 1726662247973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     //   nous remplissons la balise html p en parcourant les avis et en ajoutant le nom de l'utilisateur et son commentaire\n       for (let i = 0; i < avis.length; i++) {\n          avisElement.innerHTML += `${avis[i].utilisateur}: ${avis[i].commentaire} <br>`;\n       }\n-      \n+    //   \n       pieceElement.appendChild(avisElement);\n  \n      });\n  \n"
+                },
+                {
+                    "date": 1726664005678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         event.preventDefault();  \n     // Création de l’objet du nouvel avis.\n         const avis = {\n             pieceId: parseInt(event.target.querySelector(\"[name=piece-id]\").value),\n-            nbEtoiles: parseInt\n+            nbEtoiles: parseInt()\n             utilisateur: event.target.querySelector(\"[name=utilisateur\").value,\n             commentaire: event.target.querySelector(\"[name=commentaire]\").value,\n         };\n         // Création de la charge utile au format JSON\n"
+                }
+            ],
+            "date": 1726659849112,
+            "name": "Commit-0",
+            "content": "export function ajoutListenersAvis() {\n    const piecesElements = document.querySelectorAll(\".fiches article button\");\n\n    for (let i = 0; i < piecesElements.length; i++) {\n      piecesElements[i].addEventListener(\"click\", async function (event) {\n           /* ... */\n      });\n    }\n}"
+        }
+    ]
+}

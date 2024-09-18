@@ -1,0 +1,662 @@
+{
+    "sourceFile": "7697016-Front-End.1/pieces.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 161,
+            "patches": [
+                {
+                    "date": 1726587280150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726587390424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,12 @@\n // Récupération des pièces depuis le fichier JSON\n const reponse = await fetch(\"pieces-autos.json\");\n-const pieces = await reponse.json();\n\\ No newline at end of file\n+const pieces = await reponse.json();\n+const article = pieces[0];\n+const imageElement = document.createElement(\"img\");\n+imageElement.src = article.image;\n+const nomElement = document.createElement(\"h2\");\n+nomElement.innerText = article.nom;\n+const prixElement = document.createElement(\"p\");\n+prixElement.innerText = `Prix: ${article.prix} €`;\n+const categorieElement = document.createElement(\"p\");\n+categorieElement.innerText = article.categorie;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726587514820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,11 @@\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} €`;\n const categorieElement = document.createElement(\"p\");\n-categorieElement.innerText = article.categorie;\n\\ No newline at end of file\n+categorieElement.innerText = article.categorie;\n+\n+const sectionFiches = document.querySelector(\".fiches\");\n+sectionFiches.appendChild(imageElement);\n+sectionFiches.appendChild(nomElement);\n+sectionFiches.appendChild(prixElement);\n+sectionFiches.appendChild(categorieElement);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726587679267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n imageElement.src = article.image;\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n+\n prixElement.innerText = `Prix: ${article.prix} €`;\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n \n"
+                },
+                {
+                    "date": 1726587696233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n \n prixElement.innerText = `Prix: ${article.prix} €`;\n+\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n \n const sectionFiches = document.querySelector(\".fiches\");\n"
+                },
+                {
+                    "date": 1726587701355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,9 @@\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n \n-prixElement.innerText = `Prix: ${article.prix} €`;\n-\n+prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n \n const sectionFiches = document.querySelector(\".fiches\");\n"
+                },
+                {
+                    "date": 1726587729457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n // Récupération des pièces depuis le fichier JSON\n const reponse = await fetch(\"pieces-autos.json\");\n const pieces = await reponse.json();\n+\n const article = pieces[0];\n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n \n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n \n const sectionFiches = document.querySelector(\".fiches\");\n"
+                },
+                {
+                    "date": 1726587735902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n const reponse = await fetch(\"pieces-autos.json\");\n const pieces = await reponse.json();\n \n const article = pieces[0];\n+\n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n"
+                },
+                {
+                    "date": 1726587756844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n const article = pieces[0];\n \n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n+\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n+\n const prixElement = document.createElement(\"p\");\n \n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n"
+                },
+                {
+                    "date": 1726587763930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n \n const prixElement = document.createElement(\"p\");\n-\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n"
+                },
+                {
+                    "date": 1726587842378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n \n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n+\n+\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie;\n \n const sectionFiches = document.querySelector(\".fiches\");\n"
+                },
+                {
+                    "date": 1726587889939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n \n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n+document.body.appendChild(prixElement);\n \n-\n const categorieElement = document.createElement(\"p\");\n-categorieElement.innerText = article.categorie;\n+categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588129626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n+\n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588134737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n+const \n \n-\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588143798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-const \n+const descriptionElement\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588150944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-const descriptionElement\n+const descriptionElement = document\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588157728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-const descriptionElement = document\n+const descriptionElement = document.createElement\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588167408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,11 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-const descriptionElement = document.createElement\n+const descriptionElement = document.createElement(\"p\");\n \n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588174882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n+descriptionElement.in\n \n-\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588180474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.in\n+descriptionElement.innerText\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588192828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText\n+descriptionElement.innerText = article\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588201313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article\n+descriptionElement.innerText = article.decri\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588206842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decri\n+descriptionElement.innerText = article.decription\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588234978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription\n+descriptionElement.innerText = article.decription \n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588241039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription \n+descriptionElement.innerText = article.decription ?? ''\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588246552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription ?? ''\n+descriptionElement.innerText = article.decription ?? \"()\"\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588266223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription ?? \"()\"\n+descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\"\n \n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n"
+                },
+                {
+                    "date": 1726588273899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\"\n \n+\n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588290328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\"\n \n \n \n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588297624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,15 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\"\n+descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n+const \n \n \n \n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588303610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const \n+const disponobli\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588309718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const disponobli\n+const disponible\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588315203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const disponible\n+const disponibleElement = \n \n \n \n \n"
+                },
+                {
+                    "date": 1726588320449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const disponibleElement = \n+const disponibleElement = document.\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588327297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const disponibleElement = document.\n+const disponibleElement = document.createElement\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588333244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,14 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n-const disponibleElement = document.createElement\n+const disponibleElement = document.createElement(\"p\")\n \n \n \n \n+\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588341414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,13 +21,13 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n+dis\n \n \n \n \n-\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n"
+                },
+                {
+                    "date": 1726588348166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-dis\n+disponibleElement = inn\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588353383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = inn\n+disponibleElement = innerText\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588361167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText\n+disponibleElement = innerText = è\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588403097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = è\n+disponibleElement = innerText = `disponibli`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588408153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponibli`\n+disponibleElement = innerText = `disponiblité `\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588429318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité `\n+disponibleElement = innerText = `disponiblité ${article.prix} `\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588437274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.prix} `\n+disponibleElement = innerText = `disponiblité ${article.dis} `\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588456311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.dis} `\n+disponibleElement = innerText = `disponiblité ${article.disponiblité} `\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588462590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité} `\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  `\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588472161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  `\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  ()`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588484585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  ()`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité})`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588495754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité})`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true})`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588501467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true})`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true })`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588520315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true })`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\"})`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588527265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\"})`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\" : \"\"})`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588545072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\" : \"\"})`\n+disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"})`\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588576971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `disponiblité ${article.disponiblité}  (${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"})`\n+disponibleElement = innerText = `${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"})`;\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588715483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,12 @@\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.decription ?? \"(Pas de description pour le moment.)\";\n+descriptionElement.innerText = article.descriptions ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"})`;\n+disponibleElement = innerText = `${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"}`;\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588783731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.descriptions ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `${article.disponiblité === true ? \"En stock\" : \"Rupture de stock\"}`;\n+disponibleElement = innerText = `${article.disponiblité ? \"En stock\" : \"Rupture de stock\"}`;\n \n \n \n \n"
+                },
+                {
+                    "date": 1726588816962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n \n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n-document.body.appendChild(prixElement);\n \n+\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n const descriptionElement = document.createElement(\"p\");\n"
+                },
+                {
+                    "date": 1726588824650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,7 @@\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n-sectionFiches.appendChild(categorieElement);\n\\ No newline at end of file\n+sectionFiches.appendChild(categorieElement);\n+\n+\n"
+                },
+                {
+                    "date": 1726588834956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,7 @@\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n sectionFiches.appendChild(categorieElement);\n+sectionFiches.appendChild(descriptionElement);\n \n \n"
+                },
+                {
+                    "date": 1726588845677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,8 @@\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n sectionFiches.appendChild(categorieElement);\n sectionFiches.appendChild(descriptionElement);\n+sectionFiches.appendChild(dis);\n \n \n+\n"
+                },
+                {
+                    "date": 1726588895824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,10 @@\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n sectionFiches.appendChild(categorieElement);\n+\n sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(dis);\n+sectionFiches.appendChild(disponibleElement);\n \n \n \n"
+                },
+                {
+                    "date": 1726589007004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n \n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n+\n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.descriptions ?? \"(Pas de description pour le moment.)\";\n \n const disponibleElement = document.createElement(\"p\")\n"
+                },
+                {
+                    "date": 1726589013070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n \n const descriptionElement = document.createElement(\"p\");\n descriptionElement.innerText = article.descriptions ?? \"(Pas de description pour le moment.)\";\n \n+\n const disponibleElement = document.createElement(\"p\")\n disponibleElement = innerText = `${article.disponiblité ? \"En stock\" : \"Rupture de stock\"}`;\n \n \n"
+                },
+                {
+                    "date": 1726589078436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,4 +39,38 @@\n sectionFiches.appendChild(disponibleElement);\n \n \n \n+\n+\n+\n+// Récupération des pièces depuis le fichier JSON\n+const reponse = await fetch('pieces-autos.json');\n+const pieces = await reponse.json();\n+// Création des balises \n+const article = pieces[0];\n+const imageElement = document.createElement(\"img\");\n+imageElement.src = article.image;\n+const nomElement = document.createElement(\"h2\");\n+nomElement.innerText = article.nom;\n+const prixElement = document.createElement(\"p\");\n+prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+const categorieElement = document.createElement(\"p\");\n+categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n+\n+//Création des élements pour l'exercice\n+const descriptionElement = document.createElement(\"p\");\n+descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n+\n+const stockElement = document.createElement(\"p\");\n+stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n+\n+//Rattachement de nos balises au DOM\n+const sectionFiches = document.querySelector(\".fiches\");\n+sectionFiches.appendChild(imageElement);\n+sectionFiches.appendChild(nomElement);\n+sectionFiches.appendChild(prixElement);\n+sectionFiches.appendChild(categorieElement);\n+\n+//Ajout des éléments au DOM pour l'exercice\n+sectionFiches.appendChild(descriptionElement);\n+sectionFiches.appendChild(stockElement);\n"
+                },
+                {
+                    "date": 1726589125640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,35 +42,4 @@\n \n \n \n \n-// Récupération des pièces depuis le fichier JSON\n-const reponse = await fetch('pieces-autos.json');\n-const pieces = await reponse.json();\n-// Création des balises \n-const article = pieces[0];\n-const imageElement = document.createElement(\"img\");\n-imageElement.src = article.image;\n-const nomElement = document.createElement(\"h2\");\n-nomElement.innerText = article.nom;\n-const prixElement = document.createElement(\"p\");\n-prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n-const categorieElement = document.createElement(\"p\");\n-categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n-\n-//Création des élements pour l'exercice\n-const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n-\n-const stockElement = document.createElement(\"p\");\n-stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n-\n-//Rattachement de nos balises au DOM\n-const sectionFiches = document.querySelector(\".fiches\");\n-sectionFiches.appendChild(imageElement);\n-sectionFiches.appendChild(nomElement);\n-sectionFiches.appendChild(prixElement);\n-sectionFiches.appendChild(categorieElement);\n-\n-//Ajout des éléments au DOM pour l'exercice\n-sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(stockElement);\n"
+                },
+                {
+                    "date": 1726589131080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,45 +1,31 @@\n // Récupération des pièces depuis le fichier JSON\n-const reponse = await fetch(\"pieces-autos.json\");\n+const reponse = await fetch('pieces-autos.json');\n const pieces = await reponse.json();\n-\n+// Création des balises \n const article = pieces[0];\n-\n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n-\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n-\n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n-\n-\n-\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-\n+//Création des élements pour l'exercice\n const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.descriptions ?? \"(Pas de description pour le moment.)\";\n+descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n \n+const stockElement = document.createElement(\"p\");\n+stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n-const disponibleElement = document.createElement(\"p\")\n-disponibleElement = innerText = `${article.disponiblité ? \"En stock\" : \"Rupture de stock\"}`;\n-\n-\n-\n-\n+//Rattachement de nos balises au DOM\n const sectionFiches = document.querySelector(\".fiches\");\n sectionFiches.appendChild(imageElement);\n sectionFiches.appendChild(nomElement);\n sectionFiches.appendChild(prixElement);\n sectionFiches.appendChild(categorieElement);\n \n+//Ajout des éléments au DOM pour l'exercice\n sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(disponibleElement);\n-\n-\n-\n-\n-\n-\n+sectionFiches.appendChild(stockElement);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726589137256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n // Création des balises \n const article = pieces[0];\n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n+\n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n"
+                },
+                {
+                    "date": 1726589143358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,15 @@\n const reponse = await fetch('pieces-autos.json');\n const pieces = await reponse.json();\n // Création des balises \n const article = pieces[0];\n+\n const imageElement = document.createElement(\"img\");\n imageElement.src = article.image;\n \n const nomElement = document.createElement(\"h2\");\n nomElement.innerText = article.nom;\n+\n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n"
+                },
+                {
+                    "date": 1726590716793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n nomElement.innerText = article.nom;\n \n const prixElement = document.createElement(\"p\");\n prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+\n const categorieElement = document.createElement(\"p\");\n categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n //Création des élements pour l'exercice\n@@ -30,5 +31,8 @@\n sectionFiches.appendChild(categorieElement);\n \n //Ajout des éléments au DOM pour l'exercice\n sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(stockElement);\n\\ No newline at end of file\n+sectionFiches.appendChild(stockElement);\n+\n+\n+\n"
+                },
+                {
+                    "date": 1726590733760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,4 +35,23 @@\n sectionFiches.appendChild(stockElement);\n \n \n \n+for (let i = 0; i < pieces.length; i++) {\n+\n+    \n+    // Récupération de l'élément du DOM qui accueillera les fiches\n+    const sectionFiches = document.querySelector(\".fiches\");\n+    // Création d’une balise dédiée à une pièce automobile\n+    const pieceElement = document.createElement(\"article\");\n+    // On crée l’élément img.\n+    const imageElement = document.createElement(\"img\");\n+    // On accède à l’indice i de la liste pieces pour configurer la source de l’image.\n+    imageElement.src = pieces[i].image;\n+    // Idem pour le nom, le prix et la catégorie...\n+    \n+    // On rattache la balise article à la section Fiches\n+    sectionFiches.appendChild(pieceElement);\n+    // On rattache l’image à pieceElement (la balise article)\n+    pieceElement.appendChild(imageElement);\n+    // Idem pour le nom, le prix et la catégorie...\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726590764568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,23 +23,23 @@\n const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n //Rattachement de nos balises au DOM\n-const sectionFiches = document.querySelector(\".fiches\");\n-sectionFiches.appendChild(imageElement);\n-sectionFiches.appendChild(nomElement);\n-sectionFiches.appendChild(prixElement);\n-sectionFiches.appendChild(categorieElement);\n+// const sectionFiches = document.querySelector(\".fiches\");\n+// sectionFiches.appendChild(imageElement);\n+// sectionFiches.appendChild(nomElement);\n+// sectionFiches.appendChild(prixElement);\n+// sectionFiches.appendChild(categorieElement);\n \n-//Ajout des éléments au DOM pour l'exercice\n-sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(stockElement);\n+// //Ajout des éléments au DOM pour l'exercice\n+// sectionFiches.appendChild(descriptionElement);\n+// sectionFiches.appendChild(stockElement);\n \n \n \n for (let i = 0; i < pieces.length; i++) {\n \n-    \n+\n     // Récupération de l'élément du DOM qui accueillera les fiches\n     const sectionFiches = document.querySelector(\".fiches\");\n     // Création d’une balise dédiée à une pièce automobile\n     const pieceElement = document.createElement(\"article\");\n"
+                },
+                {
+                    "date": 1726590817299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n //Rattachement de nos balises au DOM\n-// const sectionFiches = document.querySelector(\".fiches\");\n+const sectionFiches = document.querySelector(\".fiches\");\n // sectionFiches.appendChild(imageElement);\n // sectionFiches.appendChild(nomElement);\n // sectionFiches.appendChild(prixElement);\n // sectionFiches.appendChild(categorieElement);\n"
+                },
+                {
+                    "date": 1726590839995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,16 @@\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n //Rattachement de nos balises au DOM\n const sectionFiches = document.querySelector(\".fiches\");\n-// sectionFiches.appendChild(imageElement);\n-// sectionFiches.appendChild(nomElement);\n-// sectionFiches.appendChild(prixElement);\n-// sectionFiches.appendChild(categorieElement);\n+sectionFiches.appendChild(imageElement);\n+sectionFiches.appendChild(nomElement);\n+sectionFiches.appendChild(prixElement);\n+sectionFiches.appendChild(categorieElement);\n \n-// //Ajout des éléments au DOM pour l'exercice\n-// sectionFiches.appendChild(descriptionElement);\n-// sectionFiches.appendChild(stockElement);\n+//Ajout des éléments au DOM pour l'exercice\n+sectionFiches.appendChild(descriptionElement);\n+sectionFiches.appendChild(stockElement);\n \n \n \n for (let i = 0; i < pieces.length; i++) {\n"
+                },
+                {
+                    "date": 1726590886604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n sectionFiches.appendChild(prixElement);\n sectionFiches.appendChild(categorieElement);\n \n //Ajout des éléments au DOM pour l'exercice\n-sectionFiches.appendChild(descriptionElement);\n-sectionFiches.appendChild(stockElement);\n+// sectionFiches.appendChild(descriptionElement);\n+// sectionFiches.appendChild(stockElement);\n \n \n \n for (let i = 0; i < pieces.length; i++) {\n"
+                },
+                {
+                    "date": 1726591208446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,13 @@\n const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n //Rattachement de nos balises au DOM\n-const sectionFiches = document.querySelector(\".fiches\");\n-sectionFiches.appendChild(imageElement);\n-sectionFiches.appendChild(nomElement);\n-sectionFiches.appendChild(prixElement);\n-sectionFiches.appendChild(categorieElement);\n+// const sectionFiches = document.querySelector(\".fiches\");\n+// sectionFiches.appendChild(imageElement);\n+// sectionFiches.appendChild(nomElement);\n+// sectionFiches.appendChild(prixElement);\n+// sectionFiches.appendChild(categorieElement);\n \n //Ajout des éléments au DOM pour l'exercice\n // sectionFiches.appendChild(descriptionElement);\n // sectionFiches.appendChild(stockElement);\n@@ -53,5 +53,7 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n+\n+    \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591216795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,7 +53,8 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n+    pieceElement.appendChild(imageElement);\n+    \n \n-    \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591229330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,8 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n-    pieceElement.appendChild(imageElement);\n+    pieceElement.appendChild(no);\n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591292209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,8 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n-    pieceElement.appendChild(no);\n+    se.appendChild(nomElement);\n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591316637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,8 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n-    se.appendChild(nomElement);\n+   \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591373127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n     // On accède à l’indice i de la liste pieces pour configurer la source de l’image.\n     imageElement.src = pieces[i].image;\n     // Idem pour le nom, le prix et la catégorie...\n     \n+    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591405114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,11 @@\n     const imageElement = document.createElement(\"img\");\n     // On accède à l’indice i de la liste pieces pour configurer la source de l’image.\n     imageElement.src = pieces[i].image;\n     // Idem pour le nom, le prix et la catégorie...\n+    const nomElement = document.createElement(\"h2\");\n+nomElement.innerText = article.nom;\n     \n-    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591434089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     // On accède à l’indice i de la liste pieces pour configurer la source de l’image.\n     imageElement.src = pieces[i].image;\n     // Idem pour le nom, le prix et la catégorie...\n     const nomElement = document.createElement(\"h2\");\n-nomElement.innerText = article.nom;\n+    nomElement.innerText = pi.nom;\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591441199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     // On accède à l’indice i de la liste pieces pour configurer la source de l’image.\n     imageElement.src = pieces[i].image;\n     // Idem pour le nom, le prix et la catégorie...\n     const nomElement = document.createElement(\"h2\");\n-    nomElement.innerText = pi.nom;\n+    nomElement.innerText = pieces[i].nom;\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591473801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n+    \n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591496884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,10 @@\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n-    \n+\n+    pieceElement.appendChild(imageElement);\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591502934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n \n-    pieceElement.appendChild(imageElement);\n+    pieceElement.appendChild(nomElement);\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591514895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,11 @@\n     imageElement.src = pieces[i].image;\n     // Idem pour le nom, le prix et la catégorie...\n     const nomElement = document.createElement(\"h2\");\n     nomElement.innerText = pieces[i].nom;\n+\n     \n+    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591538284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,10 +50,11 @@\n     // Idem pour le nom, le prix et la catégorie...\n     const nomElement = document.createElement(\"h2\");\n     nomElement.innerText = pieces[i].nom;\n \n+    const prixElement = document.createElement(\"p\");\n+prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n     \n-    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591547346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     const nomElement = document.createElement(\"h2\");\n     nomElement.innerText = pieces[i].nom;\n \n     const prixElement = document.createElement(\"p\");\n-prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+    prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591559154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     const nomElement = document.createElement(\"h2\");\n     nomElement.innerText = pieces[i].nom;\n \n     const prixElement = document.createElement(\"p\");\n-    prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+    prixElement.innerText = `Prix: ${pi.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591564505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     const nomElement = document.createElement(\"h2\");\n     nomElement.innerText = pieces[i].nom;\n \n     const prixElement = document.createElement(\"p\");\n-    prixElement.innerText = `Prix: ${pi.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+    prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591571316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,8 +60,11 @@\n     pieceElement.appendChild(imageElement);\n     // Idem pour le nom, le prix et la catégorie...\n \n     pieceElement.appendChild(nomElement);\n+\n+    pieceElement.appendChild(nomElement);\n+\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591577174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n     // Idem pour le nom, le prix et la catégorie...\n \n     pieceElement.appendChild(nomElement);\n \n-    pieceElement.appendChild(nomElement);\n+    pieceElement.appendChild(prixElement);\n \n    \n     \n \n"
+                },
+                {
+                    "date": 1726591597290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,11 @@\n     nomElement.innerText = pieces[i].nom;\n \n     const prixElement = document.createElement(\"p\");\n     prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n+\n     \n+    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591606378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,10 +53,11 @@\n \n     const prixElement = document.createElement(\"p\");\n     prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n+    const categorieElement = document.createElement(\"p\");\n+    categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n     \n-    \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n     pieceElement.appendChild(imageElement);\n"
+                },
+                {
+                    "date": 1726591617495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n     const prixElement = document.createElement(\"p\");\n     prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n     const categorieElement = document.createElement(\"p\");\n-    categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n+    categorieElement.innerText = pi.categorie ?? \"(aucune catégorie)\";\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591627091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n     const prixElement = document.createElement(\"p\");\n     prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n     const categorieElement = document.createElement(\"p\");\n-    categorieElement.innerText = pi.categorie ?? \"(aucune catégorie)\";\n+    categorieElement.innerText = pieces[i].categorie ?? \"(aucune catégorie)\";\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n@@ -66,8 +66,11 @@\n     pieceElement.appendChild(nomElement);\n \n     pieceElement.appendChild(prixElement);\n \n+    pieceElement.appendChild(prixElement);\n+\n+\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591632623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n     pieceElement.appendChild(nomElement);\n \n     pieceElement.appendChild(prixElement);\n \n-    pieceElement.appendChild(prixElement);\n+    pieceElement.appendChild();\n \n \n    \n     \n"
+                },
+                {
+                    "date": 1726591638403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,11 +66,13 @@\n     pieceElement.appendChild(nomElement);\n \n     pieceElement.appendChild(prixElement);\n \n-    pieceElement.appendChild();\n+    pieceElement.appendChild(categorieElement);\n \n+    \n \n+\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591667208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,16 @@\n     prixElement.innerText = `Prix: ${pieces[i].prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n     const categorieElement = document.createElement(\"p\");\n     categorieElement.innerText = pieces[i].categorie ?? \"(aucune catégorie)\";\n+\n+\n+    const descriptionElement = document.createElement(\"p\");\n+descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n+\n+const stockElement = document.createElement(\"p\");\n+stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n+\n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n@@ -68,11 +76,11 @@\n     pieceElement.appendChild(prixElement);\n \n     pieceElement.appendChild(categorieElement);\n \n-    \n \n \n+\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591673053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,13 +58,13 @@\n     categorieElement.innerText = pieces[i].categorie ?? \"(aucune catégorie)\";\n \n \n     const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n+    descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n \n const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n-\n+ \n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n     // On rattache l’image à pieceElement (la balise article)\n"
+                },
+                {
+                    "date": 1726591678781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n \n     const descriptionElement = document.createElement(\"p\");\n     descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n \n-const stockElement = document.createElement(\"p\");\n+    const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n  \n     \n     // On rattache la balise article à la section Fiches\n"
+                },
+                {
+                    "date": 1726591688388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n     const descriptionElement = document.createElement(\"p\");\n     descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n \n     const stockElement = document.createElement(\"p\");\n-stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n+    stockElement.innerText = pi.disponibilite ? \"En stock\" : \"Rupture de stock\";\n  \n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n"
+                },
+                {
+                    "date": 1726591701183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,12 +58,12 @@\n     categorieElement.innerText = pieces[i].categorie ?? \"(aucune catégorie)\";\n \n \n     const descriptionElement = document.createElement(\"p\");\n-    descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n+    descriptionElement.innerText = pi.description ?? \"Pas de description pour le moment.\";\n \n     const stockElement = document.createElement(\"p\");\n-    stockElement.innerText = pi.disponibilite ? \"En stock\" : \"Rupture de stock\";\n+    stockElement.innerText = pieces[i].disponibilite ? \"En stock\" : \"Rupture de stock\";\n  \n     \n     // On rattache la balise article à la section Fiches\n     sectionFiches.appendChild(pieceElement);\n"
+                },
+                {
+                    "date": 1726591729857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n     categorieElement.innerText = pieces[i].categorie ?? \"(aucune catégorie)\";\n \n \n     const descriptionElement = document.createElement(\"p\");\n-    descriptionElement.innerText = pi.description ?? \"Pas de description pour le moment.\";\n+    descriptionElement.innerText = pieces[i].description ?? \"Pas de description pour le moment.\";\n \n     const stockElement = document.createElement(\"p\");\n     stockElement.innerText = pieces[i].disponibilite ? \"En stock\" : \"Rupture de stock\";\n  \n@@ -76,11 +76,15 @@\n     pieceElement.appendChild(prixElement);\n \n     pieceElement.appendChild(categorieElement);\n \n+    pieceElement.appendChild(categorieElement);\n+    pieceElement.appendChild(categorieElement);\n \n \n \n+\n+\n    \n     \n \n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726591737286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,10 +76,10 @@\n     pieceElement.appendChild(prixElement);\n \n     pieceElement.appendChild(categorieElement);\n \n+    pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(categorieElement);\n-    pieceElement.appendChild(categorieElement);\n \n \n \n \n"
+                },
+                {
+                    "date": 1726591743553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n \n     pieceElement.appendChild(categorieElement);\n \n     pieceElement.appendChild(descriptionElement);\n-    pieceElement.appendChild(categorieElement);\n+    pieceElement.appendChild(dis);\n \n \n \n \n"
+                },
+                {
+                    "date": 1726591758283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n \n     pieceElement.appendChild(categorieElement);\n \n     pieceElement.appendChild(descriptionElement);\n-    pieceElement.appendChild(dis);\n+    pieceElement.appendChild(di);\n \n \n \n \n"
+                },
+                {
+                    "date": 1726591763740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n \n     pieceElement.appendChild(categorieElement);\n \n     pieceElement.appendChild(descriptionElement);\n-    pieceElement.appendChild(di);\n+    pieceElement.appendChild(stockElement);\n \n \n \n \n"
+                },
+                {
+                    "date": 1726592003540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,11 @@\n // Récupération des pièces depuis le fichier JSON\n const reponse = await fetch('pieces-autos.json');\n const pieces = await reponse.json();\n-// Création des balises \n-const article = pieces[0];\n \n-const imageElement = document.createElement(\"img\");\n-imageElement.src = article.image;\n \n-const nomElement = document.createElement(\"h2\");\n-nomElement.innerText = article.nom;\n \n-const prixElement = document.createElement(\"p\");\n-prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n-const categorieElement = document.createElement(\"p\");\n-categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n-\n-//Création des élements pour l'exercice\n-const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n-\n-const stockElement = document.createElement(\"p\");\n-stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n-\n-//Rattachement de nos balises au DOM\n-// const sectionFiches = document.querySelector(\".fiches\");\n-// sectionFiches.appendChild(imageElement);\n-// sectionFiches.appendChild(nomElement);\n-// sectionFiches.appendChild(prixElement);\n-// sectionFiches.appendChild(categorieElement);\n-\n-//Ajout des éléments au DOM pour l'exercice\n-// sectionFiches.appendChild(descriptionElement);\n-// sectionFiches.appendChild(stockElement);\n-\n-\n-\n for (let i = 0; i < pieces.length; i++) {\n \n \n     // Récupération de l'élément du DOM qui accueillera les fiches\n"
+                },
+                {
+                    "date": 1726592017483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,42 @@\n // Récupération des pièces depuis le fichier JSON\n const reponse = await fetch('pieces-autos.json');\n const pieces = await reponse.json();\n+// Création des balises \n+const article = pieces[0];\n \n+const imageElement = document.createElement(\"img\");\n+imageElement.src = article.image;\n \n+const nomElement = document.createElement(\"h2\");\n+nomElement.innerText = article.nom;\n \n+const prixElement = document.createElement(\"p\");\n+prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n+const categorieElement = document.createElement(\"p\");\n+categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n+\n+//Création des élements pour l'exercice\n+const descriptionElement = document.createElement(\"p\");\n+descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n+\n+const stockElement = document.createElement(\"p\");\n+stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n+\n+//Rattachement de nos balises au DOM\n+// const sectionFiches = document.querySelector(\".fiches\");\n+// sectionFiches.appendChild(imageElement);\n+// sectionFiches.appendChild(nomElement);\n+// sectionFiches.appendChild(prixElement);\n+// sectionFiches.appendChild(categorieElement);\n+\n+//Ajout des éléments au DOM pour l'exercice\n+// sectionFiches.appendChild(descriptionElement);\n+// sectionFiches.appendChild(stockElement);\n+\n+\n+\n for (let i = 0; i < pieces.length; i++) {\n \n \n     // Récupération de l'élément du DOM qui accueillera les fiches\n"
+                },
+                {
+                    "date": 1726592025086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,18 +22,9 @@\n \n const stockElement = document.createElement(\"p\");\n stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n \n-//Rattachement de nos balises au DOM\n-// const sectionFiches = document.querySelector(\".fiches\");\n-// sectionFiches.appendChild(imageElement);\n-// sectionFiches.appendChild(nomElement);\n-// sectionFiches.appendChild(prixElement);\n-// sectionFiches.appendChild(categorieElement);\n \n-//Ajout des éléments au DOM pour l'exercice\n-// sectionFiches.appendChild(descriptionElement);\n-// sectionFiches.appendChild(stockElement);\n \n \n \n for (let i = 0; i < pieces.length; i++) {\n"
+                },
+                {
+                    "date": 1726592048308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +1,11 @@\n // Récupération des pièces depuis le fichier JSON\n-const reponse = await fetch('pieces-autos.json');\n-const pieces = await reponse.json();\n-// Création des balises \n-const article = pieces[0];\n \n-const imageElement = document.createElement(\"img\");\n-imageElement.src = article.image;\n \n-const nomElement = document.createElement(\"h2\");\n-nomElement.innerText = article.nom;\n \n-const prixElement = document.createElement(\"p\");\n-prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? \"€\" : \"€€€\"})`;\n \n-const categorieElement = document.createElement(\"p\");\n-categorieElement.innerText = article.categorie ?? \"(aucune catégorie)\";\n \n-//Création des élements pour l'exercice\n-const descriptionElement = document.createElement(\"p\");\n-descriptionElement.innerText = article.description ?? \"Pas de description pour le moment.\";\n \n-const stockElement = document.createElement(\"p\");\n-stockElement.innerText = article.disponibilite ? \"En stock\" : \"Rupture de stock\";\n-\n-\n-\n-\n-\n for (let i = 0; i < pieces.length; i++) {\n \n \n     // Récupération de l'élément du DOM qui accueillera les fiches\n"
+                },
+                {
+                    "date": 1726592062824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n // Récupération des pièces depuis le fichier JSON\n+const reponse = await fetch('pieces-autos.json');\n+const pieces = await reponse.json();\n+// Création des balises \n+const article = pieces[0];\n \n \n \n \n"
+                },
+                {
+                    "date": 1726592225299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n \n \n for (let i = 0; i < pieces.length; i++) {\n \n-\n     // Récupération de l'élément du DOM qui accueillera les fiches\n     const sectionFiches = document.querySelector(\".fiches\");\n     // Création d’une balise dédiée à une pièce automobile\n     const pieceElement = document.createElement(\"article\");\n"
+                },
+                {
+                    "date": 1726592231707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,12 +51,5 @@\n \n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n-\n-\n-\n-\n-   \n-    \n-\n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592282256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,10 @@\n \n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n-    }\n\\ No newline at end of file\n+    }\n+    const boutonTrier = document.querySelector(\".btn-trier\");\n+boutonTrier.addEventListener(\"click\", function () {\n+    // ...\n+    \n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592411319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,6 +55,9 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n boutonTrier.addEventListener(\"click\", function () {\n     // ...\n-    \n+    pieces.sort(function (a, b) {\n+        return a.prix - b.prix;\n+    });\n+    console.log(pieces);\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592496920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,5 +59,11 @@\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n+\n+    ButtonFilter.addEventListener (« clic », function () {\n+        const PiecesFiltrees = pièces.filter (fonction (pièce) {\n+        pièce de retour.prix <= 35 ;\n+        }) ;\n+        }) ;\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592504600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,8 @@\n     });\n     console.log(pieces);\n \n     ButtonFilter.addEventListener (« clic », function () {\n-        const PiecesFiltrees = pièces.filter (fonction (pièce) {\n-        pièce de retour.prix <= 35 ;\n+       \n         }) ;\n         }) ;\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592512056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,5 @@\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n \n-    ButtonFilter.addEventListener (« clic », function () {\n-       \n-        }) ;\n-        }) ;\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592517849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,5 +60,10 @@\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n \n+    ButtonFilter.addEventListener (« clic », function () {\n+        const PiecesFiltrees = pièces.filter (fonction (pièce) {\n+        pièce de retour.prix <= 35 ;\n+        }) ;\n+        }) ;\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592524214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,10 +60,11 @@\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n \n-    ButtonFilter.addEventListener (« clic », function () {\n-        const PiecesFiltrees = pièces.filter (fonction (pièce) {\n-        pièce de retour.prix <= 35 ;\n-        }) ;\n-        }) ;\n-});\n\\ No newline at end of file\n+});\n+\n+ButtonFilter.addEventListener (« clic », function () {\n+    const PiecesFiltrees = pièces.filter (fonction (pièce) {\n+    pièce de retour.prix <= 35 ;\n+    }) ;\n+    }) ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592530766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n     console.log(pieces);\n \n });\n \n-ButtonFilter.addEventListener (« clic », function () {\n+ButtonFilter.addEventListener (« clic\", function () {\n     const PiecesFiltrees = pièces.filter (fonction (pièce) {\n     pièce de retour.prix <= 35 ;\n     }) ;\n     }) ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592547467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n     console.log(pieces);\n \n });\n \n-ButtonFilter.addEventListener (« clic\", function () {\n+ButtonFilter.addEventListener (\"clic\", function () {\n     const PiecesFiltrees = pièces.filter (fonction (pièce) {\n-    pièce de retour.prix <= 35 ;\n+    \"pièce de retour.prix <= 35 ;\n     }) ;\n     }) ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592554690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,7 +64,7 @@\n });\n \n ButtonFilter.addEventListener (\"clic\", function () {\n     const PiecesFiltrees = pièces.filter (fonction (pièce) {\n-    \"pièce de retour.prix <= 35 ;\n+    pièce de retour.prix <= 35 ;\n     }) ;\n     }) ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592597858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,8 @@\n     console.log(pieces);\n \n });\n \n-ButtonFilter.addEventListener (\"clic\", function () {\n-    const PiecesFiltrees = pièces.filter (fonction (pièce) {\n-    pièce de retour.prix <= 35 ;\n-    }) ;\n-    }) ;\n\\ No newline at end of file\n+const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n+boutonFiltrer.addEventListener(\"click\", function () {\n+    // ...\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592664054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,5 +65,13 @@\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n boutonFiltrer.addEventListener(\"click\", function () {\n     // ...\n-});\n\\ No newline at end of file\n+});\n+\n+const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n+\n+boutonFiltrer.addEventListener(\"click\", function () {\n+   const piecesFiltrees = pieces.filter(function (piece) {\n+       return piece.prix <= 35;\n+   });\n+   ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592673245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,16 +62,13 @@\n     console.log(pieces);\n \n });\n \n-const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n-boutonFiltrer.addEventListener(\"click\", function () {\n-    // ...\n-});\n \n+\n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n \n boutonFiltrer.addEventListener(\"click\", function () {\n    const piecesFiltrees = pieces.filter(function (piece) {\n        return piece.prix <= 35;\n    });\n\\ No newline at end of file\n-   ;\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592679908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,5 +70,5 @@\n boutonFiltrer.addEventListener(\"click\", function () {\n    const piecesFiltrees = pieces.filter(function (piece) {\n        return piece.prix <= 35;\n    });\n-  \n\\ No newline at end of file\n+  };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592688393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,5 +70,5 @@\n boutonFiltrer.addEventListener(\"click\", function () {\n    const piecesFiltrees = pieces.filter(function (piece) {\n        return piece.prix <= 35;\n    });\n-  };\n\\ No newline at end of file\n+ ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592696816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,13 +62,16 @@\n     console.log(pieces);\n \n });\n \n+const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n+boutonFiltrer.addEventListener(\"click\", function () {\n+    // ...\n+});\n \n-\n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n \n boutonFiltrer.addEventListener(\"click\", function () {\n\\ No newline at end of file\n    const piecesFiltrees = pieces.filter(function (piece) {\n        return piece.prix <= 35;\n    });\n- ;\n+   ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592708298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,6 @@\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n \n boutonFiltrer.addEventListener(\"click\", function () {\n-   const piecesFiltrees = pieces.filter(function (piece) {\n-       return piece.prix <= 35;\n-   });\n+  \n    ;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726592713595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,12 +64,9 @@\n });\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n boutonFiltrer.addEventListener(\"click\", function () {\n-    // ...\n+    const piecesFiltrees = pieces.filter(function (piece) {\n+        return piece.prix <= 35;\n+    });\n });\n \n-const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n-\n\\ No newline at end of file\n-boutonFiltrer.addEventListener(\"click\", function () {\n-  \n-   ;\n"
+                },
+                {
+                    "date": 1726592984198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     pieceElement.appendChild(stockElement);\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n-boutonTrier.addEventListener(\"click\", function () {\n+     boutonTrier.addEventListener(\"click\", function () {\n     // ...\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n"
+                },
+                {
+                    "date": 1726593012386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    // ...\n+    \n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593020239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    \n+    const \n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593028052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    const \n+    const pieceOrdonner = \n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593036168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    const pieceOrdonner = \n+    const pieceOrdonner = A\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593042224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    const pieceOrdonner = A\n+    const pieceOrdonner = Array.from()\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593050739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    const pieceOrdonner = Array.from()\n+    const pieceOrdonner = Array.from(pieces)\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593065596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,10 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-    const pieceOrdonner = Array.from(pieces)\n+    const pieceOrdonner = Array.from(pieces);\n+    \n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593072100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    \n+    pieceOrdonner.sort\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593099258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,11 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    pieceOrdonner.sort\n+    pieceOrdonner.sort(function (a, b) {\n+        return a.prix - b.prix;\n+    }))\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593105680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,11 +58,9 @@\n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, b) {\n         return a.prix - b.prix;\n     }))\n-    pieces.sort(function (a, b) {\n-        return a.prix - b.prix;\n-    });\n+  \n     console.log(pieces);\n \n });\n \n"
+                },
+                {
+                    "date": 1726593115212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,12 +55,12 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    pieceOrdonner.sort(function (a, b) {\n+    pieceOrdonner.sort\n+    pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n-    }))\n-  \n+    });\n     console.log(pieces);\n \n });\n \n"
+                },
+                {
+                    "date": 1726593121370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    pieceOrdonner.sort\n+    pieceOrdonner.sort(fu)\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593127344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    pieceOrdonner.sort(fu)\n+    pieceOrdonner.sort(function (a, a))\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593140714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,12 @@\n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n     const pieceOrdonner = Array.from(pieces);\n-    pieceOrdonner.sort(function (a, a))\n+    pieceOrdonner.sort(function (a, a){\n+        return a.prix - b.prix;\n+\n+    })\n     pieces.sort(function (a, b) {\n         return a.prix - b.prix;\n     });\n     console.log(pieces);\n"
+                },
+                {
+                    "date": 1726593148497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,8 @@\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n     })\n-    pieces.sort(function (a, b) {\n-        return a.prix - b.prix;\n-    });\n     console.log(pieces);\n \n });\n \n"
+                },
+                {
+                    "date": 1726593156162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,8 @@\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n     })\n-    console.log(pieces);\n \n });\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n"
+                },
+                {
+                    "date": 1726593176004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n     })\n+    con\n \n });\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n"
+                },
+                {
+                    "date": 1726593181856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n     })\n-    con\n+    console.log()\n \n });\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n"
+                },
+                {
+                    "date": 1726593203391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,14 +54,15 @@\n \n     }\n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n+        \n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n     })\n-    console.log()\n+    console.log(pieceOrdonner)\n \n });\n \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n"
+                },
+                {
+                    "date": 1726650617140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,11 +52,12 @@\n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n     }\n+    \n     const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n-        \n+\n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n"
+                },
+                {
+                    "date": 1726650634265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,10 +52,11 @@\n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n     }\n+\n+    const boutonTrier = document.querySelector(\".btn-trier\");\n     \n-    const boutonTrier = document.querySelector(\".btn-trier\");\n      boutonTrier.addEventListener(\"click\", function () {\n \n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n"
+                },
+                {
+                    "date": 1726650646159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,11 +54,11 @@\n \n     }\n \n     const boutonTrier = document.querySelector(\".btn-trier\");\n-    \n-     boutonTrier.addEventListener(\"click\", function () {\n \n+    boutonTrier.addEventListener(\"click\", function () {\n+\n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n         return a.prix - b.prix;\n \n"
+                },
+                {
+                    "date": 1726650656085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n \n     const boutonTrier = document.querySelector(\".btn-trier\");\n-\n+    //   on \n     boutonTrier.addEventListener(\"click\", function () {\n \n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n"
+                },
+                {
+                    "date": 1726650670595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n \n     }\n \n     const boutonTrier = document.querySelector(\".btn-trier\");\n-    //   on \n+    //   ecoute le clic du boutton \n     boutonTrier.addEventListener(\"click\", function () {\n \n     const pieceOrdonner = Array.from(pieces);\n     pieceOrdonner.sort(function (a, a){\n"
+                },
+                {
+                    "date": 1726650676935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n     }\n+    // on recup\n \n     const boutonTrier = document.querySelector(\".btn-trier\");\n     //   ecoute le clic du boutton \n     boutonTrier.addEventListener(\"click\", function () {\n"
+                },
+                {
+                    "date": 1726650683158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n     pieceElement.appendChild(descriptionElement);\n     pieceElement.appendChild(stockElement);\n \n     }\n-    // on recupére \n+    // on recupére l\n \n     const boutonTrier = document.querySelector(\".btn-trier\");\n     //   ecoute le clic du boutton \n     boutonTrier.addEventListener(\"click\", function () {\n"
+                },
+                {
+                    "date": 1726651438780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n \n     });\n     console.log(pieceOrdonner)\n });\n-// on recupére le bouton pour filtrer\n+// on recupére le bouton pour filtrer \n const boutonFiltrer = document.querySelector(\".btn-filtrer\");\n boutonFiltrer.addEventListener(\"click\", function () {\n     const piecesFiltrees = pieces.filter(function (piece) {\n         return piece.prix <= 35;\n"
+                }
+            ],
+            "date": 1726587280150,
+            "name": "Commit-0",
+            "content": "// Récupération des pièces depuis le fichier JSON\nconst reponse = await fetch(\"pieces-autos.json\");\nconst pieces = await reponse.json();"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "sourceFile": "7697016-Front-End.1/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1726592151063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726651748712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n \t\t\t\t<h3>Filtres</h3>\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n+\t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n+\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n"
+                },
+                {
+                    "date": 1726651756790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \t\t\t\t<h3>Filtres</h3>\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n-\t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n+\t\t\t\t<button class=\"btn-filt\">Filtrer les pièces non abordables</button>\n \n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n"
+                },
+                {
+                    "date": 1726651765392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \t\t\t\t<h3>Filtres</h3>\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n-\t\t\t\t<button class=\"btn-filt\">Filtrer les pièces non abordables</button>\n+\t\t\t\t<button class=\"btn-fil\">Filtrer les pièces non abordables</button>\n \n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n"
+                },
+                {
+                    "date": 1726651771191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \t\t\t\t<h3>Filtres</h3>\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n-\t\t\t\t<button class=\"btn-fil\">Filtrer les pièces non abordables</button>\n+\t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces non abordables</button>\n \n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n"
+                },
+                {
+                    "date": 1726651786792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \t\t\t\t<h3>Filtres</h3>\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n-\t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces non abordables</button>\n+\t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n \n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n"
+                },
+                {
+                    "date": 1726652092797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,11 @@\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n \t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n+\t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n \n+\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n"
+                },
+                {
+                    "date": 1726652100026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n \t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n-\t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n+\t\t\t\t<button class=\"btn-filtre\">Filtrer les pièces qui on une descriptions</button>\n \n \n \t\t\t</section>\n \n"
+                },
+                {
+                    "date": 1726652117136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n \t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n-\t\t\t\t<button class=\"btn-filtre\">Filtrer les pièces qui on une descriptions</button>\n+\t\t\t\t<button class=\"btn-filtre\">Filtrer les pièces par ordre decroissant</button>\n \n \n \t\t\t</section>\n \n"
+                },
+                {
+                    "date": 1726652203973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n \t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n-\t\t\t\t<button class=\"btn-filtre\">Filtrer les pièces par ordre decroissant</button>\n+\t\t\t\t<button class=\"btn-desc\">Filtrer les pièces par ordre decroissant</button>\n \n \n \t\t\t</section>\n \n"
+                },
+                {
+                    "date": 1726653375524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n+\t\t\t\t\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726653384597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n-\t\t\t\t\n+\t\t\t\tdiv\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726653392547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n-\t\t\t\tdiv\n+\t\t\t\t<div class=\"\"></div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726653399096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n-\t\t\t\t<div class=\"\"></div>\n+\t\t\t\t<div class=\"abordables\"\n+\t\t\t\t></div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726653443246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,11 @@\n \t\t\t</section>\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n-\t\t\t\t<div class=\"abordables\"\n-\t\t\t\t></div>\n+\t\t\t\t<div class=\"abordables\">\n+\t\t\t\t\tp\n+\t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726653451888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n \t\t\t\t<div class=\"abordables\">\n-\t\t\t\t\tp\n+\t\t\t\t\t<p>Piéces</p>\n \t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n"
+                },
+                {
+                    "date": 1726653459076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n \t\t\t<!-- Fiches produits -->\n \t\t\t<section class=\"fiches\">\n \t\t\t\t<div class=\"abordables\">\n-\t\t\t\t\t<p>Piéces</p>\n+\t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n"
+                },
+                {
+                    "date": 1726654290556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,11 @@\n \t\t\t<section class=\"fiches\">\n \t\t\t\t<div class=\"abordables\">\n \t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n+\t\t\t\t<div class=\"abordables\">\n+\t\t\t\t\t<p>Piéces abordables :</p>\n+\t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n \t</body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726654305261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \t\t\t<section class=\"fiches\">\n \t\t\t\t<div class=\"abordables\">\n \t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n-\t\t\t\t<div class=\"abordables\">\n+\t\t\t\t<div class=\"disponoble\">\n \t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n"
+                },
+                {
+                    "date": 1726654313431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \t\t\t<section class=\"fiches\">\n \t\t\t\t<div class=\"abordables\">\n \t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n-\t\t\t\t<div class=\"disponible\">\n+\t\t\t\t<div class=\"disponibles\">\n \t\t\t\t\t<p>Piéces abordables :</p>\n \t\t\t\t</div>\n \t\t\t</section>\n \t\t</main>\n"
+                },
+                {
+                    "date": 1726656135414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \t\t<main>\n \t\t\t<!-- Menu de recherche -->\n \t\t\t<section class=\"filtres\">\n \t\t\t\t<h3>Filtres</h3>\n-\t\t\t\t<input type=\"range\" class=\"pri\">\n+\t\t\t\t<input type=\"range\" class=\"prix\">\n \t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n \t\t\t\t<br>\n \t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n \t\t\t\t<button class=\"btn-filtdescription\">Filtrer les pièces qui on une descriptions</button>\n"
+                }
+            ],
+            "date": 1726592151063,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"fr\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Les Bonnes Pièces</title>\n\t\t<link rel=\"stylesheet\" href=\"styles.css\">\n\t\t<script type=\"module\" src=\"pieces.js\"></script>\n\t</head>\n\t<body>\n\t\t<header>\n\t\t\t<img src=\"images/logo-les-bonnes-pieces.png\" alt=\"LOGO\">\n\t\t\t<h1>Les Bonnes Pièces</h1>\n\t\t</header>\n\t\t<main>\n\t\t\t<!-- Menu de recherche -->\n\t\t\t<section class=\"filtres\">\n\t\t\t\t<h3>Filtres</h3>\n\t\t\t\t<button class=\"btn-trier\">Trier par prix croissant</button>\n\t\t\t\t<br>\n\t\t\t\t<button class=\"btn-filtrer\">Filtrer les pièces non abordables</button>\n\t\t\t</section>\n\n\t\t\t<!-- Fiches produits -->\n\t\t\t<section class=\"fiches\">\n\t\t\t</section>\n\t\t</main>\n\t</body>\n</html>"
+        }
+    ]
+}

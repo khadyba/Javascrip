@@ -1,0 +1,182 @@
+{
+    "sourceFile": "7697016-Front-End.1/pieces-autos.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 41,
+            "patches": [
+                {
+                    "date": 1726586117426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726586138843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n [\n     {\n+        \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n-        \"categorie\": \"Optiques\",\n-        \"image\": \"images/ampoule-led.png\"\n-    }\n+        \"categorie\": \"Optiques\"\n+        \n+    },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n"
+                },
+                {
+                    "date": 1726586147027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n     {\n         \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n-        \"categorie\": \"Optiques\"\n-        \n+        \"categorie\": \"Optiques\",\n+        \"image\": \"images/ampoule-led.png\"\n+}\n     },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n"
+                },
+                {
+                    "date": 1726586155870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n     {\n         \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n-        \"categorie\": \"Optiques\",\n+        \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\"\n-}\n+    }\n     },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n"
+                },
+                {
+                    "date": 1726586161837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\"\n-    }\n     },\n+    },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n"
+                },
+                {
+                    "date": 1726586170127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n         \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n-        \"image\": \"images/ampoule-led.png\"\n+        \"image\": \"images/ampoule-led.png\",\n+    }\n     },\n-    },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n"
+                },
+                {
+                    "date": 1726586187739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,10 @@\n         \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n-        \"image\": \"images/ampoule-led.png\",\n+        \"image\": \"images/ampoule-led.png\"\n     }\n-    },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n"
+                },
+                {
+                    "date": 1726586510941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n         \"id\": 1,\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n-        \"image\": \"images/ampoule-led.png\"\n-    }\n+        \"image\": \"images/ampoule-led.png\",\n+        \"descriptions\"\n+    },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n"
+                },
+                {
+                    "date": 1726586526135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n-        \"descriptions\"\n+        \"descriptions\": \"Distance d’éclairage : 100 mètres !\"\n     },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n"
+                },
+                {
+                    "date": 1726586533020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n-        \"categorie\": \"Freinage\"\n+        \"categorie\": \"Freinage\",\n     },\n     {\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n"
+                },
+                {
+                    "date": 1726586555410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n+        \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\"\n+\n     },\n     {\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n"
+                },
+                {
+                    "date": 1726586563247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,11 @@\n     {\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n-        \"categorie\": \"Optiques\"\n+        \"categorie\": \"Optiques\",\n+        \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\"\n+\n     },\n     {\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n"
+                },
+                {
+                    "date": 1726586583145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\"\n+        \"descriptions\": \"Pour y voir clair dans l’habitacle.\"\n \n     },\n     {\n         \"id\": 4,\n"
+                },
+                {
+                    "date": 1726586590513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,12 @@\n     {\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n-        \"categorie\": \"Freinage\"\n+        \"categorie\": \"Freinage\",\n+        \"descriptions\": \"Pour y voir clair dans l’habitacle.\"\n+\n+\n     },\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n"
+                },
+                {
+                    "date": 1726586635532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n         \"categorie\": \"Freinage\",\n-        \"descriptions\": \"Pour y voir clair dans l’habitacle.\"\n+        \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\"\n \n \n     },\n     {\n"
+                },
+                {
+                    "date": 1726586642433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,10 @@\n     {\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n-        \"categorie\": \"Freinage\",\n-        \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\"\n+        \"categorie\": \"Freinage\"\n \n-\n     },\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n"
+                },
+                {
+                    "date": 1726586648357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,9 @@\n     },\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n-        \"prix\": 29.10\n+        \"prix\": 29.10,\n+        \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\"\n+\n     }\n ]\n"
+                },
+                {
+                    "date": 1726586665500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n-        \"descriptions\": \"Distance d’éclairage : 100 mètres !\"\n+        \"descriptions\": \"Distance d’éclairage : 100 mètres !\",di\n+\n     },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n"
+                },
+                {
+                    "date": 1726586673232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n         \"nom\": \"Ampoule LED\",\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n-        \"descriptions\": \"Distance d’éclairage : 100 mètres !\",di\n+        \"descriptions\": \"Distance d’éclairage : 100 mètres !\",\n+        \"disponiblit\"\n \n     },\n     {\n         \"id\": 2,\n"
+                },
+                {
+                    "date": 1726586679506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n         \"descriptions\": \"Distance d’éclairage : 100 mètres !\",\n-        \"disponiblit\"\n+        \"disponiblité\" : \"true\"\n \n     },\n     {\n         \"id\": 2,\n"
+                },
+                {
+                    "date": 1726586688056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n         \"descriptions\": \"Distance d’éclairage : 100 mètres !\",\n-        \"disponiblité\" : \"true\"\n+        \"disponiblité\" : \"oui\"\n \n     },\n     {\n         \"id\": 2,\n"
+                },
+                {
+                    "date": 1726586705950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n         \"descriptions\": \"Distance d’éclairage : 100 mètres !\",\n-        \"disponiblité\" : \"oui\"\n+        \"disponiblité\" : \n \n     },\n     {\n         \"id\": 2,\n"
+                },
+                {
+                    "date": 1726586718457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,20 @@\n         \"prix\": 60,\n         \"categorie\": \"Optiques\",  \n         \"image\": \"images/ampoule-led.png\",\n         \"descriptions\": \"Distance d’éclairage : 100 mètres !\",\n-        \"disponiblité\" : \n+        \"disponiblité\" : true\n \n     },\n     {\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n-        \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\"\n+        \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n+        \"disponiblité\" : true\n \n+\n     },\n     {\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n"
+                },
+                {
+                    "date": 1726586723880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n-        \"disponiblité\" : true\n+        \"disponiblité\" : false\n \n \n     },\n     {\n"
+                },
+                {
+                    "date": 1726586737808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n-        \"disponiblité\" : false\n+        \"disponiblité\" : true\n \n \n     },\n     {\n"
+                },
+                {
+                    "date": 1726586743423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"descriptions\": \"Pour y voir clair dans l’habitacle.\"\n+        \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n+        \"disponiblité\" : true\n \n+\n     },\n     {\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n"
+                },
+                {
+                    "date": 1726586748707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n-        \"disponiblité\" : true\n+        \"disponiblité\" : false\n \n \n     },\n     {\n"
+                },
+                {
+                    "date": 1726586762647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,12 @@\n     {\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n-        \"categorie\": \"Freinage\"\n+        \"categorie\": \"Freinage\",\n+        \"disponiblité\" : true\n \n+\n     },\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n"
+                },
+                {
+                    "date": 1726586769200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,10 @@\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n         \"prix\": 29.10,\n-        \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\"\n+        \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\",\n+        \"disponiblité\" : true\n \n+\n     }\n ]\n"
+                },
+                {
+                    "date": 1726590915828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n+        \n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n         \"disponiblité\" : true\n \n \n"
+                },
+                {
+                    "date": 1726590938258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n-        \n+        \"image\": \"images/pla.png\",\n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n         \"disponiblité\" : true\n \n \n"
+                },
+                {
+                    "date": 1726590945687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n-        \"image\": \"images/pla.png\",\n+        \"image\": \"images/plaquettes.png\",\n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n         \"disponiblité\" : true\n \n \n"
+                },
+                {
+                    "date": 1726591001136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"id\": 2,\n         \"nom\": \"Plaquettes de frein (x4)\",\n         \"prix\": 40,\n         \"categorie\": \"Freinage\",\n-        \"image\": \"images/plaquettes.png\",\n+        \"image\": \"images/plaquettes-frein.png\",\n         \"descriptions\": \"Une qualité de freinage optimale, par tous les temps.\",\n         \"disponiblité\" : true\n \n \n@@ -24,8 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n+        \n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591018664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \n+        \"image\": \"images/Ampoule boîte à gants.png\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591027044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"image\": \"images/Ampoule boîte à gants.png\",\n+        \"image\": \"images/ampoule-boîte à gants.png\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591032458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"image\": \"images/ampoule-boîte à gants.png\",\n+        \"image\": \"images/ampoule-boîte-à-gants.png\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591048928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"image\": \"images/ampoule-boîte-à-gants.png\",\n+        \"image\": \"images/ampoule-boîte-a-gants.png\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591070741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \"id\": 3,\n         \"nom\": \"Ampoule boîte à gants\",\n         \"prix\": 5.49,\n         \"categorie\": \"Optiques\",\n-        \"image\": \"images/ampoule-boîte-a-gants.png\",\n+        \"image\": \"images/ampoule-boite-a-gants.png\",\n         \"descriptions\": \"Pour y voir clair dans l’habitacle.\",\n         \"disponiblité\" : false\n \n \n"
+                },
+                {
+                    "date": 1726591085684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,10 @@\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n         \"categorie\": \"Freinage\",\n+        \"image\": \"images/ampoule-boite-a-gants.png\",\n+\n         \"disponiblité\" : true\n \n \n     },\n"
+                },
+                {
+                    "date": 1726591096407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,9 @@\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n         \"categorie\": \"Freinage\",\n-        \"image\": \"images/ampoule-boite-a-gants.png\",\n-\n+        \"image\": \"images/liquide.png\",\n         \"disponiblité\" : true\n \n \n     },\n"
+                },
+                {
+                    "date": 1726591101735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         \"id\": 4,\n         \"nom\": \"Liquide de frein\",\n         \"prix\": 9.60,\n         \"categorie\": \"Freinage\",\n-        \"image\": \"images/liquide.png\",\n+        \"image\": \"images/liquide-frein.png\",\n         \"disponiblité\" : true\n \n \n     },\n"
+                },
+                {
+                    "date": 1726591122766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,10 @@\n     {\n         \"id\": 5,\n         \"nom\": \"Balai d'essuie-glace\",\n         \"prix\": 29.10,\n-        \n+        \"image\": \"images/liquide-frein.png\",\n+\n         \"descriptions\": \"Performances d’essuyage au top ! Longueur : 550 mm.\",\n         \"disponiblité\" : true\n \n \n"
+                }
+            ],
+            "date": 1726586117426,
+            "name": "Commit-0",
+            "content": "[\n    {\n        \"nom\": \"Ampoule LED\",\n        \"prix\": 60,\n        \"categorie\": \"Optiques\",\n        \"image\": \"images/ampoule-led.png\"\n    }\n    {\n        \"id\": 2,\n        \"nom\": \"Plaquettes de frein (x4)\",\n        \"prix\": 40,\n        \"categorie\": \"Freinage\"\n    },\n    {\n        \"id\": 3,\n        \"nom\": \"Ampoule boîte à gants\",\n        \"prix\": 5.49,\n        \"categorie\": \"Optiques\"\n    },\n    {\n        \"id\": 4,\n        \"nom\": \"Liquide de frein\",\n        \"prix\": 9.60,\n        \"categorie\": \"Freinage\"\n    },\n    {\n        \"id\": 5,\n        \"nom\": \"Balai d'essuie-glace\",\n        \"prix\": 29.10\n    }\n]\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "7697016-Front-End.1/styles.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1726590682855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1726590682855,
+            "name": "Commit-0",
+            "content": "@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');\n\nbody {\n\tmax-width: 1200px;\n\tmargin: auto;\n\tpadding: 16px;\n\tfont-family: 'Montserrat', sans-serif;\n}\n\nheader {\n\tdisplay: flex;\n\tflex-direction: row;\n\talign-items: center;\n\tmargin-bottom: 16px;\n\tpadding: 8px;\n\tbackground-color: #7451eb;\n\ttext-align: center;\n\tcolor: white;\n}\nheader img {\n\theight: 60px;\n\tmargin-left: 1rem;\n}\nheader h1 {\n\tflex-grow: 1;\n}\n\nmain {\n\tdisplay: flex;\n\tflex-direction: row;\n}\n\n.filtres {\n\tborder-radius: 4px;\n\tbox-shadow: 0px 0px 4px gray;\n\tmargin: 8px;\n\tpadding: 8px;\n\tmin-width: 300px;\n\tmin-height: 400px;\n}\n.filtres h3 {\n\ttext-align: center;\n}\n\n.fiches {\n\tflex: 1;\n\tmargin: 8px;\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 4px;\n}\n.fiches article {\n\tborder: 1px solid black;\n\tpadding: 4px;\n}\n.fiches article img {\n\tdisplay: block;\n\tmargin-left: auto;\n\tmargin-right: auto;\n\tmax-width: 200px;\n}\n.fiches article p {\n\tmargin-top: 4px;\n\tmargin-bottom: 4px;\n}\n.fiches article h2 {\n\ttext-align: center;\n}"
+        }
+    ]
+}
